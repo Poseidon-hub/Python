@@ -1,0 +1,19 @@
+<migration urlid="http://www.microsoft.com/migration/1.0/migxmlext/CustomFile">
+    <component type="Documents" context="User">
+        <displayName>My Video</displayName>
+        <role role="Data">
+            <detects>
+                <detect>
+                    <!-- Ошибка: пропущен элемент <condition> -->
+                </detect>
+            </detects>
+            <rules>
+                <include filter="MigXmlHelper.IgnoreIrrelevantLinks()">
+                    <objectSet>
+                        <pattern type="File">%CSIDL_MYVIDEO%\* [*]</pattern>
+                    </objectSet>
+                </include>
+            </rules>
+        </role>
+    </component>
+</migration>
